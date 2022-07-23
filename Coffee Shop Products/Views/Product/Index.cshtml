@@ -1,0 +1,17 @@
+﻿@model List<Coffee>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@{
+    foreach(Coffee c in Model)
+    {
+        <div>
+        <a asp-controller="Product" asp-action="ProductDetails" asp-route-productId="@c.Id">@c.Name</a>             
+        <h3>$@c.Price</h3>         
+        </div>
+    }
+}
